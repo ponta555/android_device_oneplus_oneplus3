@@ -104,8 +104,10 @@ void vendor_load_properties() {
     } else if (strstr(rf_version, "21")) {
         /* Asia/Europe */
         property_set("ro.product.model", "ONEPLUS A3003");
+    } else {
+      /* Other Model */
+      property_set("ro.product.model", "ONEPLUS A300x RFv" + rf_version);
     }
 
     init_alarm_boot_properties();
 }
-
